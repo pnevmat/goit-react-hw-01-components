@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import DefaultImg from './user-photo-placeholder.webp';
 import Styles from './SocialProfile.module.css';
 
 const SocialProfile = (props) => (
@@ -10,7 +12,7 @@ const SocialProfile = (props) => (
                 className={Styles.avatar}
             />
             <p className={Styles.name}>{props.name}</p>
-            <p className={Styles.tag}>{props.tag}</p>
+            <p className={Styles.tag}>@{props.tag}</p>
             <p className={Styles.location}>{props.location}</p>
         </div>
         <ul className={Styles.stats}>
@@ -30,5 +32,19 @@ const SocialProfile = (props) => (
     </div>
 
 );
+
+SocialProfile.defaultProps = {
+    avatar: DefaultImg
+};
+
+SocialProfile.propTypes = {
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    userFollowers: PropTypes.number.isRequired,
+    userViews: PropTypes.number.isRequired,
+    userLikes: PropTypes.number.isRequired
+};
 
 export default SocialProfile;

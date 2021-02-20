@@ -1,0 +1,18 @@
+.item {
+    display: inline-block;
+    max-width: 100px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.percentage {
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+}
