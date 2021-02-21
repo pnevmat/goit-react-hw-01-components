@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StatisticsCard from './StatisticsCard/StatisticsCard';
+import StatisticsCard from './StatisticsCard';
 import Styles from './StatisticsSection.module.css';
 
 const StatisticsSection = ({props}) => (
